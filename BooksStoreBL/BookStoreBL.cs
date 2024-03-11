@@ -32,13 +32,13 @@ namespace BooksStoreBL
         }
         public IEnumerable<BookDetails> c()
         {
-            var result= ListOfBooks.Where(BookDetails => BookDetails.IsComics=true);
-            return (IEnumerable<BookDetails>)result.Select(BookDetails => BookDetails.Price);
+            var result= ListOfBooks.Where(BookDetails => BookDetails.IsComics=true).Select(BookDetails => BookDetails.Price);
+            return result;
         }
         public IEnumerable<BookDetails> d()
         {
-            var result = ListOfBooks.Where(for9);
-            return (IEnumerable<BookDetails>)result.Select(BookDetails => BookDetails.Name);
+            var result = ListOfBooks.Where(for9).Select(BookDetails => BookDetails.Name);
+            return result;
         }
 
         private bool for9(BookDetails BookDetails)
